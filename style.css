@@ -139,12 +139,13 @@ body.bg2{
 
 .left_header_in{
     background-color: #191919;
-    height: 80%;
+    height: 90%;
     display: flex;
-    
+    padding-top: 10px;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 10%;
+    /* padding: 40px 10%; */
+    padding: 17px;
     border-radius: 10px;
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -302,22 +303,27 @@ p{
     color: #999;
     font-size: 20px;
     font-weight: 400;
-    padding-right: 10px;
+    padding-top:10px ;
+    padding-right:30px;
     padding-left: 30px;
     animation: moveUp2 2.5s ease-out forwards;
 }
-
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
 
 /* -----------image--------- */
 .frontscreen .right_content section{
     width: 100%;
-    padding: 30px;
+    
     background-color: #191919;
     margin-bottom: 30px;
     box-shadow: 0px 3px 4px rgb(0 0 0 / 30%);
     border-radius: 10px;
     float: left;
     clear: both;
+    
 }
 .section_header{
     width: 100%;
@@ -335,8 +341,8 @@ section{
 }
 
 .section_header .content{
-    padding-top: 200px;
-    padding-bottom: 200px;
+    /* padding-top: 100px; */
+    padding-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -353,12 +359,14 @@ section{
 
 .section_header .left_hero_header {
     width: 475px;
-    max-width: 40%;
+    max-width: 45%;
+
     padding-right: 80px;
 }
 
 .section_header .circle {
     position: relative;
+    height: 350px;
 }
 .section_header .circle .bg_img {
     position: absolute;
@@ -391,7 +399,7 @@ img {
     right: 0px;
     left: 7px;
     bottom: 10px;
-    background-color: var(--mc);
+    background-color: #3452ff;
     z-index: 2;
     border-radius: 100%;
     color: rgba(52, 82, 255, 0.1);
@@ -418,16 +426,34 @@ img {
     z-index: 5;
 }
 .section_header .lines span {
-    width: 4px;
+    /* width: 4px;
     height: 138%;
     display: block;
     background: #3452ff;
-    background: linear-gradient(180deg, var(--mc) 50%, rgba(211, 165, 131, 1) 50%, rgba(211, 165, 131, 1) 100%);
+    background: linear-gradient(180deg, var(#3452ff) 50%, rgba(211, 165, 131, 1) 50%, rgba(211, 165, 131, 1) 100%);
     transform: rotate(30deg);
     z-index: 13;
     position: absolute;
     top: -18%;
-    left: 40%;
+    left: 40%; */
+
+
+
+   
+        width: 4px;
+        height: 138%;
+        display: block;
+        background-color: #999;
+        background: #3452ff;
+       
+        background: linear-gradient(180deg, #3452ff 50%, rgba(211, 165, 131, 1) 50%, rgba(211, 165, 131, 1) 100%);
+        transform: rotate(30deg);
+        z-index: 13;
+        position: absolute;
+        top: -18%;
+        left: 40%
+
+
 }
 .section_header .lines span:nth-child(2) {
     left: 52%;
@@ -445,6 +471,9 @@ img {
 
 .section_header .right_hero_header {
     width: 60%;
+    margin-top: -50px;
+    margin-left: -30px;
+    
 }
 @media (max-width: 1040px) {
     .my_self {
@@ -476,8 +505,92 @@ vertical-align: top;
     display: inline-block;
     padding: .2em 0;
 }
-.cd-words-wrapper{
+/* .cd-words-wrapper{
     display: inline-block;
     position: relative;
     text-align: left;
-}
+} */
+.cd-words-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 85%; /* Set a fixed width to prevent shifting */
+    height: 1.2em; /* Set height to match the text line height */
+    overflow: hidden; /* Hide elements that are outside the container */
+    vertical-align: top;
+    text-align: left;
+
+  }
+  
+  .cd-words-wrapper b {
+    position: absolute; /* All words stack in the same position */
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transform: translateY(100%); /* Start below the container */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .cd-words-wrapper b.is-visible {
+    opacity: 1;
+    transform: translateY(0); /* Move into the visible area */
+  }
+  
+  .cd-words-wrapper b.is-hidden {
+    opacity: 0;
+    transform: translateY(-100%); /* Move out above the container */
+  }
+  
+
+  /* -----------Biography Section------ */
+  .bio_title h3 {
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    padding-bottom: 11px;
+    text-decoration: underline 3px;
+    text-decoration-color: #3452ff;
+    text-underline-offset: 5px;
+    color: #aaa;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  #biography_p{
+    margin-top: 0px;
+    padding: 10px;
+    font-size: 17px;
+    /* letter-spacing: ; */
+    text-align: justify;
+    margin-bottom: -40px;
+
+  }
+  .bio_info
+    {
+        margin-top: 42px;
+    }
+  
+    .bio_info ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 10px;
+    }
+    .bio_info ul li {
+        background-color: #111;
+        padding: 0px 10px;
+        line-height: .4;
+        margin: 0 0 6px 20px;
+        font-size: 18px;
+        border-radius: 3px;
+        text-align: center;
+    }
+    .bio_info span {
+        font-weight: 300;
+    }
+
+
+    /* -------education part---------- */
+    

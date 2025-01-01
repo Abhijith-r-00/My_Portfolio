@@ -98,39 +98,133 @@
           </ul>
         </div>
       </div>
+      <!-- right side of the screen -->
       <div class="right_content">
+        <!-- my image and name  section  -->
         <section id="hero-header" class="section_header">
-					<div class="content">
-						<div class="left_hero_header">
-							<div class="circle">
-								<div class="bg_img"  style="background-image: url('./assets/abhijithrr\ \(1\).png');"></div>
-								<img src="./assets/square.jpg" alt="">
-								<div class="circle_holder_blue"><span></span></div>
-								<div class="circle_holder_orange"><span></span></div>
-								<div class="lines">
-									<span></span>
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-						</div>
-						<div class="right_hero_header">
-							<div class="my_self">
-								<h4>Hello! I'm a</h4>
-								<h2>
-									<!-- It is animation title. You can change animation variation by changing extra class to one of next classes: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push. cd-headline class can not be removed.  -->
-									<span class="cd-headline clip">
-										<span class="cd-words-wrapper" style="width: 149.244px; overflow: hidden;">
-										  <b class="is-hidden">Designer</b>
-										  <b class="is-hidden">Developer</b>
-										  <b class="is-visible">Freelancer</b>
-										</span>
-									</span>
-								</h2>
-							</div>
-						</div>
-					</div>
-				</section>
+          <div class="content">
+            <div class="left_hero_header">
+              <div class="circle">
+                <div
+                  class="bg_img"
+                  style="
+                    background-image: url('./assets/abhijith-side-rit.jpg');
+                  "
+                ></div>
+                <img src="./assets/square.jpg" alt="" />
+                <div class="circle_holder_blue"><span></span></div>
+                <div class="circle_holder_orange"><span></span></div>
+                <div class="lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div class="right_hero_header">
+              <div class="my_self">
+                <h4>Hello! I'm a</h4>
+                <h2>
+                  <!-- It is animation title. You can change animation variation by changing extra class to one of next classes: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push. cd-headline class can not be removed.  -->
+                  <span class="cd-headline clip">
+                    <span class="cd-words-wrapper">
+                      <b class="is-hidden">Designer</b>
+                      <b class="is-hidden">Developer</b>
+                      <b class="is-visible">Freelancer</b>
+                    </span>
+                  </span>
+                </h2>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const words = document.querySelectorAll(
+                      ".cd-words-wrapper b"
+                    );
+                    let currentIndex = 0;
+
+                    function changeWord() {
+                      // Remove 'is-visible' from current element
+                      words[currentIndex].classList.remove("is-visible");
+                      words[currentIndex].classList.add("is-hidden");
+
+                      // Move to the next word
+                      currentIndex = (currentIndex + 1) % words.length;
+
+                      // Add 'is-visible' to the next element
+                      words[currentIndex].classList.remove("is-hidden");
+                      words[currentIndex].classList.add("is-visible");
+                    }
+
+                    // Change word every 2 seconds
+                    setInterval(changeWord, 2000);
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- bio content -->
+        <section id="biograpghy">
+          <div class="bio_title">
+            <h3>BIOGRAPHY</h3>
+          </div>
+          <!-- I’m a skilled MERN Stack Developer, passionate about crafting dynamic and user-centric web applications that make an impact. I excel in turning ideas into seamless digital experiences, blending creativity with robust technical expertise. Collaborating with diverse teams and individuals fuels my drive for innovation, as every new project brings an opportunity to grow and create something extraordinary. Let’s collaborate to build exceptional digital solutions! -->
+          <p id="biography_p">
+            I'm a MERN Stack Developer with expertise in creating user-centric,
+            dynamic websites and web applications. I specialize in coding and
+            crafting web elements that bring ideas to life. I thrive on
+            collaborating with new people, embracing every project as an
+            opportunity to gain new experiences and deliver innovative
+            solutions. Let's build something amazing together!
+          </p>
+          <div class="bio_info">
+            <ul>
+              <li>
+                <p>Name: <span>Abhijith R</span></p>
+              </li>
+              <li>
+                <p>Birthday: <span>June 17, 2002</span></p>
+              </li>
+              <li>
+                <p>Languages: <span>English, Malayalam</span></p>
+              </li>
+              <li>
+                <p>Age: <span>22 Years</span></p>
+              </li>
+              <li>
+                <p>Nationality: <span>Indian</span></p>
+              </li>
+              <!-- <li><p>Adress: <span>R R </span></p></li> -->
+              <li>
+                <p>Telegram: <span>Available</span></p>
+              </li>
+              <li>
+                <p>
+                  Phone:
+                  <span
+                    ><a href="tel:+91 7902485210">(+91) 7902485210 </a></span
+                  >
+                </p>
+              </li>
+              <!-- <li><p>linkedin: <span>Adam.M</span></p></li> -->
+              <li>
+                <p>
+                  Email:
+                  <span
+                    ><a href="mailto:Abhijithrajendranu@gmail.com"
+                      >Abhijithrajendranu@gmail.com</a
+                    ></span
+                  >
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- --Education----- -->
+        <section id="education">
+          <div class="bio_title">
+            <h3>Education</h3>
+          </div>
+        </section>
       </div>
     </div>
   </body>
