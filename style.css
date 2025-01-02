@@ -278,15 +278,25 @@ p{
 
 /* --------------------------------------right header------------------------------- */
 
-  @keyframes moveUp2 {
+  /* @keyframes moveUp2 {
     from {
-      transform: translateY(1200vh); /* Start below the viewport */
+      transform: translateY(1200vh);  */
+      /* Start below the viewport */
+    /* }
+    to {
+      transform: translateY(10vh);  */
+      /* Middle of the viewport */
+    /* }
+  } */
+  @keyframes moveDown {
+    from {
+      transform: translateY(-1200vh); /* Start above the viewport */
     }
     to {
       transform: translateY(10vh); /* Middle of the viewport */
     }
   }
-
+  
 .right_content{
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -306,7 +316,7 @@ p{
     padding-top:10px ;
     padding-right:30px;
     padding-left: 30px;
-    animation: moveUp2 2.5s ease-out forwards;
+    animation: moveDown 2.5s ease-out forwards;
 }
 div {
     display: block;
@@ -425,21 +435,7 @@ img {
     bottom: 0;
     z-index: 5;
 }
-.section_header .lines span {
-    /* width: 4px;
-    height: 138%;
-    display: block;
-    background: #3452ff;
-    background: linear-gradient(180deg, var(#3452ff) 50%, rgba(211, 165, 131, 1) 50%, rgba(211, 165, 131, 1) 100%);
-    transform: rotate(30deg);
-    z-index: 13;
-    position: absolute;
-    top: -18%;
-    left: 40%; */
-
-
-
-   
+.section_header .lines span {   
         width: 4px;
         height: 138%;
         display: block;
@@ -486,6 +482,7 @@ img {
     margin: 0;
     margin-bottom: 1px;
     color: #aaa;
+    left: 0;
 }
 .my_self h2 {
     margin: 0;
@@ -513,7 +510,7 @@ vertical-align: top;
 .cd-words-wrapper {
     display: inline-block;
     position: relative;
-    width: 85%; /* Set a fixed width to prevent shifting */
+    width: 89%; /* Set a fixed width to prevent shifting */
     height: 1.2em; /* Set height to match the text line height */
     overflow: hidden; /* Hide elements that are outside the container */
     vertical-align: top;
@@ -543,17 +540,21 @@ vertical-align: top;
 
   /* -----------Biography Section------ */
   .bio_title h3 {
-    margin: 0;
+    text-align: center;
+    margin:0;
     padding: 10px;
     position: relative;
     padding-bottom: 11px;
-    text-decoration: underline 3px;
-    text-decoration-color: #3452ff;
-    text-underline-offset: 5px;
+    /* text-decoration: underline 3px; */
+    /* text-decoration-color: #3452ff; */
+    text-underline-offset: 8px;
     color: #aaa;
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 1px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    /* color: #333; */
   }
   #biography_p{
     margin-top: 0px;
@@ -680,8 +681,219 @@ vertical-align: top;
 /* ---------skills---------- */
 
 
+.content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+  } */
+  
+  .skills-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 5px auto;
+    padding: 20px;
+    background: #191919;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* #skills-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+  } */
+  
+  .skill {
+    margin-bottom: 20px;
+  }
+  
+  .skill-title {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight:400;
+    color: #aaa;
+  }
+  /* .skill-title img{
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+  } */
+  .progress-bar {
+    width: 100%;
+    /* background-color: #ddd; */
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 20px;
+    width: 0;
+    background-color: #3452ff;
+    border-radius: 25px;
+    transition: width 3s ease-in-out;
+  }
+
+
+
+
+  .progress {
+    position: relative;
+  }
+  
+  .percentage {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .progress-bar:hover .percentage {
+    opacity: 1; /* Optional: Show percentage on hover */
+  }
 
 
 
 
 
+
+
+
+  
+/*------------------- Section Clients-----------------------------------------------*/
+.project_wrapper{
+	width: 100%;
+    float: left;
+    clear: both;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid transparent;
+	background-color: #111;
+}
+.project_wrapper ul{
+	margin: -1px -10px -1px -1px;
+    list-style-type: none;
+    padding-top: 1px;
+    float: left;
+    padding-left: 1px;
+    min-width: calc(100% + 2px);
+}
+.project_wrapper ul li{
+	margin: 0px;
+    float: left;
+    width: 33.1%;
+    border: 1px solid #1d1d1d;
+    text-align: center;
+    height: 195px;
+    line-height: 195px;
+    position: relative;
+    margin-top: -1px;
+    margin-left: -1px;
+    overflow: hidden;
+}
+.project_wrapper a{
+	display: block;
+}
+.project_wrapper img{
+	max-width: 88%;
+    max-height: 100px;
+	opacity: .85;
+	
+	
+}
+.project_wrapper a:hover img{
+    transition: transform 0.5s ;
+    opacity: 1; 
+    transform:  scale(1.1) ; /* Slight zoom */
+}
+
+/* ----------contact section------------------- */
+
+
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  /* .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+  } */
+  
+  .contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input, textarea {
+    width: 100%;
+    background-color: #191919;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #3452ff;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .submit-btn {
+    background-color: #3452ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .submit-btn:hover {
+    background-color: #3452ff;
+  }
+  
+  .submit-btn:focus {
+    outline: none;
+  }
+  
+
+  .social_media li a:hover{
+    transition: transform 0.5s ;
+    background-color: #3452ff;
+    transform:  scale(1.3)
+  }
+ 
